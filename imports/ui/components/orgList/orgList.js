@@ -121,7 +121,6 @@ class OrgList {
       });
       $scope.firstindex = unordered.indexOf(ordered[0]) + 1; //first match
       $scope.secondindex = unordered.indexOf(ordered[1]) + 1; //second match
-      console.log($scope.firstindex + " " + $scope.secondindex);
       $state.go('partyDetails', {'indexes': [$scope.firstindex, $scope.secondindex]});
       {
         $('#fbprogloader').hide();
