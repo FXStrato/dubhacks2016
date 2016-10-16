@@ -9,6 +9,10 @@
   display: none;
 }
 
+.transbg{
+  background: rgba(0,0,0,0.7);
+}
+
 .indeterminate {
   width: 70%;
 }

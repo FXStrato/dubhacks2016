@@ -12,7 +12,7 @@ class OrgList {
     $reactive(this).attach($scope);
 
     this.helpers({
-      parties() {
+      organizations() {
         return Parties.find({});
       }
     });
@@ -37,6 +37,8 @@ class OrgList {
                 $('#fbprogp').hide();
                 $('#initialtext').removeClass('animated fadeIn');
                 $('#initialtext').addClass('animated fadeOut');
+                $('#testcard').show();
+                $('#testcard').addClass('animated fadeIn');
               }
             }
         );

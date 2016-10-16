@@ -1,4 +1,4 @@
-<div class="container centered center-align animated fadeIn">
+<div class="container center-align animated fadeIn">
   <div class="row">
     <div class="col s12">
       <h1 class="">Joy'n Me</h1>
@@ -18,10 +18,24 @@
       </ul> -->
     </div>
   </div>
+  <div id="result" class="truncate"></div>
   <div class="row">
-    <!--Need separate divs for each organization-->
-    <div class="col s12 m6 l4">
-      <div id="result" class="truncate"></div>
+    <div ng-repeat="org in orgList.organizations" class="col s12">
+      <a target="blank_" href="{{org.link}}">
+      <div class="card hoverable">
+            <div class="card-image">
+              <div style="background: url({{org.img}}); background-size: cover; min-height: 300px; max-height: 800px; width: 100%; background-repeat: no-repeat"></div>
+
+              <span class="card-title transbg">{{org.name}}</span>
+            </div>
+            <div class="card-content black-text">
+              <p>{{org.description}}</p>
+            </div>
+            <div class="card-action orange-text lighten-1">
+              <span>{{org.keyword}}</span>
+            </div>
+          </div>
+        </a>
     </div>
   </div>
 </div>
