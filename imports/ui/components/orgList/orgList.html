@@ -3,6 +3,7 @@
     <div class="col s12">
       <h1 class="">Joy'n Me</h1>
       <p id="initialtext" class="white-text">Please login to Facebook to search for a nonprofit organization best suited to your personality</p>
+      <button id="loggedbutton" class="waves-effect btn orange darken-2" ng-click="orgList.fb()">Find Organizations</button>
       <button id="fbbutton" class="waves-effect btn orange darken-2" ng-click="orgList.fb()">Log in to Facebook</button>
       <p id="fbprogp">Getting data...</p>
       <div id="fbprogloader" class="progress">
@@ -19,23 +20,5 @@
     </div>
   </div>
   <div id="result" class="truncate"></div>
-  <div class="row">
-    <div ng-repeat="org in orgList.organizations" class="col s12">
-      <a target="blank_" href="{{org.link}}">
-      <div class="card hoverable">
-            <div class="card-image">
-              <div style="background: url({{org.img}}); background-size: cover; min-height: 300px; max-height: 800px; width: 100%; background-repeat: no-repeat"></div>
 
-              <span class="card-title transbg">{{org.name}}</span>
-            </div>
-            <div class="card-content black-text">
-              <p>{{org.description}}</p>
-            </div>
-            <div class="card-action orange-text lighten-1">
-              <span>{{org.keyword}}</span>
-            </div>
-          </div>
-        </a>
-    </div>
-  </div>
 </div>

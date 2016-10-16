@@ -5,11 +5,11 @@
   transform: translate(-50%, -50%);
 }
 
-#fbprogp, #fbprogloader {
+#fbprogp, #fbprogloader, #loggedbutton, #fbbutton {
   display: none;
 }
 
-.transbg{
+.transbg {
   background: rgba(0,0,0,0.7);
 }
 

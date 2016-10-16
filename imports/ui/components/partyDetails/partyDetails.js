@@ -11,30 +11,11 @@ class PartyDetails {
 
     $reactive(this).attach($scope);
 
-    this.partyId = $stateParams.partyId;
+    this.indexes = $stateParams.indexes.split(',');
 
     this.helpers({
-      party() {
-        return Parties.findOne({
-          _id: $stateParams.partyId
-        });
-      }
-    });
-  }
-
-  save() {
-    Parties.update({
-      _id: this.party._id
-    }, {
-      $set: {
-        name: this.party.name,
-        description: this.party.description
-      }
-    }, (error) => {
-      if (error) {
-        console.log('Oops, unable to update the party...');
-      } else {
-        console.log('Done!');
+      organizations() {
+        return Parties.find({});
       }
     });
   }
@@ -57,7 +38,7 @@ function config($stateProvider) {
   'ngInject';
 
   $stateProvider.state('partyDetails', {
-    url: '/:partyId',
+    url: '/:indexes',
     template: '<party-details></party-details>'
   });
 }
