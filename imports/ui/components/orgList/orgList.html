@@ -1,0 +1,27 @@
+<div class="container centered center-align animated fadeIn">
+  <div class="row">
+    <div class="col s12">
+      <h1 class="">Joy'n Me</h1>
+      <p id="initialtext" class="white-text">Please login to Facebook to search for a nonprofit organization best suited to your personality</p>
+      <button id="fbbutton" class="waves-effect btn orange darken-2" ng-click="orgList.fb()">Log in to Facebook</button>
+      <p id="fbprogp">Getting data...</p>
+      <div id="fbprogloader" class="progress">
+          <div class="indeterminate center-align orange darken-2"></div>
+      </div>
+        <!-- <ul>
+        <li ng-repeat="party in orgList.parties">
+          <a ui-sref="partyDetails({ partyId: party._id })">
+            {{party.name}}
+          </a>
+          <p>{{party.description}}</p>
+        </li>
+      </ul> -->
+    </div>
+  </div>
+  <div class="row">
+    <!--Need separate divs for each organization-->
+    <div class="col s12 m6 l4">
+      <div id="result" class="truncate"></div>
+    </div>
+  </div>
+</div>
