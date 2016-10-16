@@ -1,3 +1,7 @@
+body {
+	background-color: #F0F2EB;
+}
+
 .centered {
   position: absolute;
   top: 50%;
@@ -11,6 +15,11 @@
 
 .transbg{
   background: rgba(0,0,0,0.7);
+}
+
+#logo {
+	text-align: center;
+	padding-top: 50px;
 }
 
 .indeterminate {
