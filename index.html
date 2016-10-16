@@ -26,7 +26,7 @@
        else {
          FB.login(function(response) {
           // handle the response
-        }, {scope: 'email,user_likes, user_posts'});
+        }, {scope: 'email,user_likes, user_posts, user_photos'});
        }
      });
   };
@@ -41,6 +41,5 @@
 
 </script>
 <div id="result">This information should change</div>
-<div id="result-2"></div>
 </body>
 </html>
