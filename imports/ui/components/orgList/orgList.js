@@ -15,6 +15,7 @@ class OrgList {
 
     $scope.firstindex = 0;
     $scope.secondindex = 0;
+    this.fbloaded = false;
 
     this.helpers({
       organizations() {
@@ -29,7 +30,6 @@ class OrgList {
         version    : 'v2.8'
       });
       FB.AppEvents.logPageView();
-      checkLogin();
     };
 
     (function(d, s, id){
@@ -44,13 +44,9 @@ class OrgList {
        FB.getLoginStatus(function(response) {
          //Hide log into facebook button and show other one
          if (response.status === 'connected') {
-           $('#fbbutton').hide();
-           $('#loggedbutton').show();
-           $('#loggedbutton').addClass("animated fadeIn");
+           console.log("Already logged in");
          } else {
-           $('#fbbutton').show();
-           $('#fbbutton').addClass("animated fadeIn");
-           $('#loggedbutton').hide();
+           console.log("Log in now!");
          }
        });
      }
