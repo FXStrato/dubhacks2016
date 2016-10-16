@@ -1,8 +1,28 @@
-The party your selected is:
-<form>
-  Party name: <input type="text" ng-model="partyDetails.party.name" />
-  Description: <input type="text" ng-model="partyDetails.party.description" />
-  <button ng-click="partyDetails.save()">Save</button>
-</form>
+<div class="container center-align animated fadeIn">
+  <div class="row">
+    <div class="col s12">
+      <h1>Joy'n Me</h1>
+      <p class="flow-text">List of organizations that match you via your posts through Facebook! Go get 'em tiger!</p>
+      <button class="btn waves-effect" ui-sref="home">Go Back</button>
+    </div>
+  </div>
+  <div class="row">
+    <div ng-repeat="org in partyDetails.organizations | orderBy: 'name'" ng-if="org.keycode == partyDetails.indexes[0] || org.keycode == partyDetails.indexes[1]" class="col s12">
+      <a target="blank_" href="{{org.link}}">
+      <div class="card hoverable">
+            <div class="card-image">
+              <div style="background: url({{org.img}}); background-size: cover; min-height: 300px; max-height: 800px; width: 100%; background-repeat: no-repeat"></div>
 
-<button ui-sref="home">Back</button>
+              <span class="card-title transbg">{{org.name}}</span>
+            </div>
+            <div class="card-content black-text">
+              <p>{{org.description}}</p>
+            </div>
+            <div class="card-action orange-text lighten-1">
+              <span>{{org.keyword}}</span>
+            </div>
+          </div>
+        </a>
+    </div>
+  </div>
+</div>

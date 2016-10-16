@@ -45,7 +45,7 @@ Meteor.startup(() => {
         'lat':47.606787,
         'long':-122.320349,
         'keyword':'Arts, Culture & Humanities',
-        'Keycode':2
+        'keycode':2
   },
 
     {
@@ -56,7 +56,7 @@ Meteor.startup(() => {
         'lat':47.618597,
         'long':-122.317228,
         'keyword':'Arts, Culture & Humanities',
-        'Keycode': 2
+        'keycode': 2
   },
 
     {
@@ -67,7 +67,7 @@ Meteor.startup(() => {
         'lat':47.560715,
         'long':-122.387177,
         'keyword':'Arts, Culture & Humanities',
-        'Keycode': 2
+        'keycode': 2
   },
 
     {
@@ -78,7 +78,7 @@ Meteor.startup(() => {
         'lat':47.684944,
         'long':-122.298222,
         'keyword':'Education',
-        'Keycode': 3
+        'keycode': 3
   },
 
     {
@@ -89,7 +89,7 @@ Meteor.startup(() => {
         'lat':47.557995,
         'long':-122.331304,
         'keyword':'Education',
-        'Keycode': 3
+        'keycode': 3
   },
 
     {
@@ -100,7 +100,7 @@ Meteor.startup(() => {
         'lat':47.766165,
         'long':-122.329218,
         'keyword':'Education',
-        'Keycode': 3
+        'keycode': 3
   },
 
    {
@@ -111,7 +111,7 @@ Meteor.startup(() => {
         'lat':47.62303,
         'long':-122.358424,
         'keyword':'Health',
-        'Keycode': 4
+        'keycode': 4
   },
 
     {
@@ -122,7 +122,7 @@ Meteor.startup(() => {
         'lat':47.614178,
         'long':-122.334732,
         'keyword':'Health',
-        'Keycode': 4
+        'keycode': 4
   },
 
     {
@@ -133,7 +133,7 @@ Meteor.startup(() => {
         'lat':47.611965,
         'long':-122.339731,
         'keyword':'Health',
-        'Keycode': 4
+        'keycode': 4
   },
 
     {
@@ -144,7 +144,7 @@ Meteor.startup(() => {
         'lat':47.605816,
         'long':-122.3319745,
         'keyword':'Human Services',
-        'Keycode': 5
+        'keycode': 5
   },
 
     {
@@ -155,7 +155,7 @@ Meteor.startup(() => {
         'lat':47.5989146,
         'long':-122.3253955,
         'keyword':'Human Services',
-        'Keycode': 5
+        'keycode': 5
   },
 
    {
