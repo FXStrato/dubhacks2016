@@ -56,20 +56,18 @@ class OrgList {
       FB.getLoginStatus(function(response) {
         if (response.status === 'connected') {
           {
-            $('#fbbutton').hide();
-            $('#fbprogp').show();
-            $('#fbprogloader').show();
-          }
-
-          FB.api(
-            "/me",
-            function(response) {
-              if (response && !response.error) {
-                $()
-              }
+            if(response.authResponse.accessToken != undefined || response.authResponse.accessToken != null) {
+              $('#fbbutton').hide();
+              $('#fbprogp').show();
+              $('#fbprogloader').show();
+            } else {
+              FB.login(function(response) {
+                // handle the response
+              }, {
+                scope: 'email,user_likes, user_posts, user_photos'
+              });
             }
-          );
-
+          }
           FB.api(
             "/me/posts?limit=200",
             function(response) {
@@ -79,7 +77,14 @@ class OrgList {
               }
             }
           );
-        } else {
+        } else if (response.status === 'not_authorized') {
+          FB.login(function(response) {
+            // handle the response
+          }, {
+            scope: 'email,user_likes, user_posts, user_photos'
+          });
+        }
+         else {
           FB.login(function(response) {
             // handle the response
           }, {
